@@ -1,0 +1,18 @@
+.honeybook-embed {
+  min-width: 0;
+  background: var(--paper);
+  border-top: 4px solid var(--gold);
+  padding: clamp(12px, 2vw, 24px);
+  color: var(--charcoal);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.honeybook-embed > div {
+  width: 100%;
+}
+
+@media (max-width: 620px) {
+  .honeybook-embed {
+    padding: 8px;
+  }
+}
