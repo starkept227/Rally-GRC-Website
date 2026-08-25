@@ -1,0 +1,87 @@
+:root {
+  --photo-navy: rgba(11, 19, 32, .28);
+  --photo-forest: rgba(16, 59, 46, .18);
+}
+
+.photo-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+  margin: 0;
+}
+
+.photo-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, var(--photo-navy), var(--photo-forest));
+  mix-blend-mode: multiply;
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-portrait {
+  align-self: center;
+  min-height: 440px;
+  border: 1px solid rgba(199, 154, 74, .65);
+  box-shadow: 18px 18px 0 var(--forest);
+}
+
+.hero { grid-template-columns: minmax(0, 1fr) minmax(290px, 360px); }
+
+.hero-portrait::after {
+  background: linear-gradient(180deg, rgba(11, 19, 32, .02) 45%, rgba(11, 19, 32, .42));
+  mix-blend-mode: multiply;
+}
+
+.homepage-photo {
+  min-height: 390px;
+  margin: 0 clamp(24px, 6vw, 90px);
+  border-bottom: 5px solid var(--gold);
+}
+
+.homepage-photo img { object-position: center; }
+
+.advisory-feature {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: clamp(36px, 6vw, 84px);
+  align-items: center;
+  margin-bottom: 68px;
+}
+
+.advisory-feature .section-intro { margin-bottom: 0; }
+.advisory-feature .photo-frame { min-height: 380px; border-top: 5px solid var(--gold); }
+
+.article-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+  gap: clamp(40px, 7vw, 100px);
+  align-items: center;
+}
+
+.article-hero-grid .article-hero-copy { min-width: 0; }
+.article-hero-grid .article-photo { min-height: 430px; border-bottom: 5px solid var(--gold); }
+.article-hero-grid .article-photo::after {
+  background: linear-gradient(135deg, rgba(11, 19, 32, .16), rgba(16, 59, 46, .32));
+}
+
+@media (max-width: 950px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-portrait { display: block; min-height: 520px; max-width: 520px; width: 100%; }
+  .advisory-feature, .article-hero-grid { grid-template-columns: 1fr; }
+  .article-hero-grid .article-photo { min-height: 360px; order: -1; }
+  .homepage-photo { min-height: 320px; }
+}
+
+@media (max-width: 620px) {
+  .hero-portrait { min-height: 420px; box-shadow: 10px 10px 0 var(--forest); }
+  .homepage-photo { min-height: 235px; margin-inline: 24px; }
+  .advisory-feature .photo-frame, .article-hero-grid .article-photo { min-height: 245px; }
+}
