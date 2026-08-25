@@ -1,0 +1,5 @@
+.site-header{position:sticky!important;top:0;z-index:1000!important;box-shadow:0 1px 0 rgba(199,154,74,.22)}
+section[id]{scroll-margin-top:92px}
+.site-header nav a.active:not(.nav-cta){color:var(--gold);position:relative}
+.site-header nav a.active:not(.nav-cta):after{content:'';position:absolute;left:0;right:0;bottom:-10px;height:2px;background:var(--gold)}
+@media(max-width:950px){.site-header nav a.active:not(.nav-cta):after{bottom:-4px}}
