@@ -9,3 +9,4 @@ section[id]{scroll-margin-top:92px}
 .article-meta{margin-top:18px;font-size:.78rem;letter-spacing:.04em;color:var(--gold)}
 .footer-link{color:var(--cream);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
 .footer-link:hover{color:var(--gold)}
+.footer-links{display:flex;flex-wrap:wrap;gap:8px 22px}
