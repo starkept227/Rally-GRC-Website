@@ -1,0 +1,11 @@
+.site-header{position:sticky!important;top:0;z-index:1000!important;box-shadow:0 1px 0 rgba(199,154,74,.22)}
+section[id]{scroll-margin-top:92px}
+.site-header nav a.active:not(.nav-cta){color:var(--gold);position:relative}
+.site-header nav a.active:not(.nav-cta):after{content:'';position:absolute;left:0;right:0;bottom:-10px;height:2px;background:var(--gold)}
+@media(max-width:950px){.site-header nav a.active:not(.nav-cta):after{bottom:-4px}}
+/* Mobile menu: sit above the HoneyBook widget and block what's behind it */
+@media(max-width:950px){.site-header nav{z-index:1001;box-shadow:0 18px 40px rgba(0,0,0,.45);border-bottom:1px solid rgba(199,154,74,.35)}}
+/* Article byline / date and footer link */
+.article-meta{margin-top:18px;font-size:.78rem;letter-spacing:.04em;color:var(--gold)}
+.footer-link{color:var(--cream);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
+.footer-link:hover{color:var(--gold)}
