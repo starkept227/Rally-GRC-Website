@@ -29,3 +29,5 @@ section[id]{scroll-margin-top:92px}
 .tag{display:inline-block;margin-right:8px;padding:2px 8px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border:1px solid currentColor}
 .tag-gap{color:#9a3b2e}.tag-partial{color:#8a6a1f}.tag-ok{color:var(--forest)}
 .path-more{margin:22px 0 0}.path-more a{color:var(--forest);font-weight:700;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
+.bio-link{display:inline-block;margin:18px 0 0 22px;color:var(--navy)}
+.about-photo img{object-position:center 18%}
