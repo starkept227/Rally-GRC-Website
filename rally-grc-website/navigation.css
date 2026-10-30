@@ -36,3 +36,15 @@ section[id]{scroll-margin-top:92px}
 body:has(.article-hero) .site-header nav{display:none;position:absolute;top:92px;left:0;right:0;background:var(--navy);padding:24px;flex-flow:column nowrap;align-items:flex-start;gap:20px;font-size:.77rem}
 body:has(.article-hero) .site-header nav.open{display:flex}
 }
+
+/* Readable gold on light backgrounds (WCAG AA); bright gold stays on navy/forest */
+:root{--gold-text:#85601c}
+.leadership .eyebrow,.framework .eyebrow,.services .eyebrow,.insights .eyebrow,.path .eyebrow,
+.service-num,.service-label,.service-delivery>span,.insight-card>p{color:var(--gold-text)}
+.path-grid small{font-size:.72rem;letter-spacing:.08em}
+.eyebrow{font-size:.74rem}
+.service-label,.service-delivery>span,.insight-card>p{font-size:.72rem}
+/* 404: keep footer at the bottom, no stray cream strip */
+body:has(.article-hero){min-height:100vh;display:flex;flex-direction:column}
+body:has(.article-hero)>main{flex:1 0 auto}
+body:has(.article-hero):not(:has(.article-body))>main{background:var(--navy)}
