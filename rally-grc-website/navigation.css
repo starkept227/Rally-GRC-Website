@@ -18,3 +18,4 @@ section[id]{scroll-margin-top:92px}
 .path-grid.three{grid-template-columns:repeat(3,1fr)}
 @media(max-width:950px){.service-modules{grid-column:2}.service-modules ul{grid-template-columns:1fr}.path-grid.three{grid-template-columns:1fr}}
 @media(max-width:620px){.service-modules{grid-column:auto}}
+.service-more{display:inline-block;margin-top:18px}
