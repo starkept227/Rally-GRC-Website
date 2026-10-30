@@ -31,3 +31,8 @@ section[id]{scroll-margin-top:92px}
 .path-more{margin:22px 0 0}.path-more a{color:var(--forest);font-weight:700;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
 .bio-link{display:inline-block;margin:18px 0 0 22px;color:var(--navy)}
 .about-photo img{object-position:center 18%}
+/* Subpages: restore the hamburger menu (insights.css forced the full nav open at <=900px on article-style pages) */
+@media(max-width:950px){
+body:has(.article-hero) .site-header nav{display:none;position:absolute;top:92px;left:0;right:0;background:var(--navy);padding:24px;flex-flow:column nowrap;align-items:flex-start;gap:20px;font-size:.77rem}
+body:has(.article-hero) .site-header nav.open{display:flex}
+}
